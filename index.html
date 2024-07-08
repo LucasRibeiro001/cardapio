@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="website icon" href="./assets/LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Viscondi Burguer - A melhor hamburgueria da cidade!</title>
+</head>
+<body>
+    <!-- Header -->
+     <header class="w-full h-[350px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col items-center justify-center">
+            <img src="./assets/logo.png" alt="logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-white text-3xl mt-4 mb-2 font-bold">Viscondi Burguer</h1>
+            <span class="text-white font-medium">Rua Viscondi 55, São Paulo - SP</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg à Dom - 18:00 as 22:00</span>
+            </div>
+        </div>
+     </header>
+     <!-- Fim Header -->
+
+     <!--Menu-->
+     <h2 class="text-white text-center text-2xl font-bold mt-9 mb-6">Conheça nosso menu!</h2>
+
+     <div id="menu">
+        <main
+          class="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-7 text-white mx-auto max-w-7xl px-2 mb-16"
+        >
+          <!--ProdutoItem-->
+          <div class="flex gap-2 ">
+            <img
+              src="./assets/hamb-1.png"
+              alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Hamburguer Smash</p>
+              <p class="text-sm">
+                Pão Brioche de trigo, 2 burguer 160g, tiplo queijo, alface
+                americano, tomate natural e maionese da casa.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$19.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Hamburguer Smash"
+                  data-price="19.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-2.png"
+              alt="Hamburguer Smash Bacon"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Hamburguer Smash Bacon</p>
+              <p class="text-sm">
+                Pão Brioche de trigo, 2 burguer 250g, queijo cheddar, duplo bacon
+                e tomate natural.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$26.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Hamburguer Smash Bacon"
+                  data-price="26.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-3.png"
+              alt="Hamburguer Duplo Junior"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Hamburguer Duplo Junior</p>
+              <p class="text-sm">
+                Pão Brioche de trigo, 2 burguer 160g, duplo queijo cheddar e
+                maionese da casa.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$19.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Hamburguer Duplo Junior"
+                  data-price="19.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-4.png"
+              alt="Natura Chicken"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Natura Chicken</p>
+              <p class="text-sm">
+                Pão de gergilim, burguer de frango, alface americano, tomate
+                natural, picles, cebola roxa e maionese zero.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$23.00</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Natura Chicken"
+                  data-price="23.00"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-5.png"
+              alt="Burguer Tradicional"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Burguer Tradicional</p>
+              <p class="text-sm">
+                Pão de hambuerguer com gergilim, burguer 250g, alface americano,
+                tomate natural e maionese da casa.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$19.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Burguer Tradicional"
+                  data-price="19.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-6.png"
+              alt="Best Burguer"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Best Burguer</p>
+              <p class="text-sm">
+                Pão brioche de trigo, burguer 250g, alface americano, tomate
+                natural, ovo, cebola roxa e maionese da casa.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$22.50</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Best Burguer"
+                  data-price="22.50"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-7.png"
+              alt="Burguer Cebola"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Burguer Cebola</p>
+              <p class="text-sm">
+                Pão brioche de trigo, burguer 250g, aníes de cebola frita, bacon
+                supremo e explosão de cheddar.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$28.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Burguer Cebola"
+                  data-price="28.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+          <!--ProdutoItem-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/hamb-8.png"
+              alt="Vegan Baby"
+              class="w-28 h-28 rounded-full hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Vegan Baby</p>
+              <p class="text-sm">
+                Pão brioche de trigo, burguer de alfafa com agrião, Alface
+                americano, tomate fresco e cenoura ralada.
+              </p>
+  
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$19.90</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Vegan Baby"
+                  data-price="19.90"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim ProdutoItem-->
+        </main>
+        <div class="mx-auto max-w-7xl px-2 my-2">
+          <h2 class="font-bold text-3xl text-white">Bebidas</h2>
+        </div>
+        <!--GRID BEBIDAS-->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-7 text-white mx-auto max-w-7xl px-2 mb-16"
+          id="menu"
+        >
+          <!--BebidaItem-->
+          <div class="flex gap-2 w-full">
+            <img
+              src="./assets/refri-1.png"
+              alt="Coca-Cola Lata"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Coca-Cola Lata</p>
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$6.00</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Coca-Cola Lata"
+                  data-price="6.00"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim BebidaItem-->
+          <!--BebidaItem-->
+          <div class="flex gap-2 w-full">
+            <img
+              src="./assets/refri-2.png"
+              alt="Guaraná Lata"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Guaraná Lata</p>
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <p class="font-bold text-lg text-orange-600">R$6.00</p>
+                <button
+                  class="bg-orange-600 px-5 rounded active:bg-red-800 add-to-cart-btn"
+                  data-name="Guaraná Lata"
+                  data-price="6.00"
+                >
+                  <i class="bx bxs-cart-add text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Fim BebidaItem-->
+        </div>
+        <!--FIM GRID BEBIDAS-->
+      </div>
+    <!-- Fim Menu-->
+
+    <!--MODAL CART-->
+
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center"
+      id="cart-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-2xl font-bold text-center mb-2">Carrinho</h2>
+        <div class="flex justify-between mb-2 flex-col" id="cart-items"></div>
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        <p class="font-medium mt-4">Endereço de entrega:</p>
+        <input
+          type="text"
+          placeholder="Digite seu endereço completo"
+          id="adress"
+          class="w-full border-2 border-solid rounded my-2 p-1 outline-none"
+        />
+        <p class="text-red-600 hidden" id="adress-warn">
+          Digite seu endereço completo!
+        </p>
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button id="close-modal-btn">Fechar</button>
+          <button
+            id="checkout-btn"
+            class="bg-green-600 text-white px-4 py-1 rounded"
+          >
+            Finalizar pedido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--FIM MODAL CART-->
+
+    <!--BUTTON CARD FOOTER-->
+
+    <footer
+      class="w-full bg-orange-800 py-2 fixed bottom-0 z-40 flex items-center justify-center text-white font-medium"
+    >
+      <button class="flex gap-2 items-center" id="cart-btn">
+        (<span id="cart-count">0</span>) Ver carrinho
+        <i class="bx bxs-cart text-lg text-white"></i>
+      </button>
+    </footer>
+
+    <!--FIM BUTTON CARD FOOTER-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
